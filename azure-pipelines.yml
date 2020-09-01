@@ -23,9 +23,8 @@ steps:
   displayName: 'Use PHP version $(phpVersion)'
 
 - script: |
-    pushd $(drupalSource)
     composer install --no-interaction --prefer-dist
-    popd
+    
 
   displayName: 'composer install'
 
