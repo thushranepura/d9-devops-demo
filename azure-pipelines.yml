@@ -11,7 +11,7 @@ pool:
 
 variables:
   phpVersion: 7.4
-  drupalSource: './src'
+  drupalSource: '/src'
   drupalDist: '$(drupalSource)/build'
 
 steps:
