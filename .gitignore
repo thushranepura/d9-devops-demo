@@ -3,9 +3,9 @@
 /web/modules/contrib/
 /web/themes/contrib/
 /web/profiles/contrib/
-/vendor/
+vendor/
 /drush/contrib/
-
+/vendor/
 # Ignore sensitive information
 /web/sites/*/settings.local.php
 /web/sites/*/settings.php
