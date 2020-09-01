@@ -11,8 +11,6 @@ pool:
 
 variables:
   phpVersion: 7.4
-  drupalSource: '/'
-  drupalDist: '$(drupalSource)'
 
 steps:
 - script: |
@@ -33,7 +31,7 @@ steps:
 
 - task: ArchiveFiles@2
   inputs:
-    rootFolderOrFile: '$(drupalDist)'
+    rootFolderOrFile: '$(Build.BinariesDirectory)'
     includeRootFolder: false
     archiveType: 'zip'
     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
@@ -45,3 +43,5 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
     publishLocation: 'Container'
+
+   
