@@ -771,12 +771,14 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
  */
 #
 
- if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
-  include $app_root . '/' . $site_path . '/settings.local.php';
- }
+//  if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
+//   include $app_root . '/' . $site_path . '/settings.local.php';
+//  }
 
- if (isset($_ENV['HOST_ENVIRONMENT'])) {
-  switch($_ENV['HOST_ENVIRONMENT']) {
+
+ if (isset($_SERVER['HOST_ENVIRONMENT'])) {
+  
+  switch($_SERVER['HOST_ENVIRONMENT']) {
    case 'live':
    case 'test':
        $config['system.performance']['cache']['page']['use_internal'] = TRUE;
