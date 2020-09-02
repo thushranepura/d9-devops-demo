@@ -771,13 +771,8 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
  */
 #
 
-//  if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
-//   include $app_root . '/' . $site_path . '/settings.local.php';
-//  }
-
-
- if (isset($_SERVER['HOST_ENVIRONMENT'])) {
-  
+ 
+ if (isset($_SERVER['HOST_ENVIRONMENT'])) {  
   switch($_SERVER['HOST_ENVIRONMENT']) {
    case 'live':
    case 'test':
@@ -805,12 +800,12 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
        # $settings['cache']['bins']['render'] = 'cache.backend.null';
        # $settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.null';
        $databases['default']['default'] = array (
-        'database' => 'drupal',
-        'username' => 'drupal',
-        'password' => 'drupal',
+        'database' => '#{database}#',
+        'username' => '#{username}#',
+        'password' => '#{password}#',
         'prefix' => '',
-        'host' => 'localhost',
-        'port' => '3306',
+        'host' => '#{hostname}#',
+        'port' => '#{port}#',
         'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
         'driver' => 'mysql',
       );
@@ -818,3 +813,7 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
        break;
    }
 }
+
+if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
+  include $app_root . '/' . $site_path . '/settings.local.php';
+ }
