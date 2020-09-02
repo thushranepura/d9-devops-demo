@@ -771,7 +771,18 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
  */
 #
 
- 
+$databases['default']['default'] = array (
+  'database' => '#{database}#',
+  'username' => '#{username}#',
+  'password' => '#{password}#',
+  'prefix' => '',
+  'host' => '#{hostname}#',
+  'port' => '#{port}#',
+  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+  'driver' => 'mysql',
+); 
+
+
  if (isset($_SERVER['HOST_ENVIRONMENT'])) {  
   switch($_SERVER['HOST_ENVIRONMENT']) {
    case 'live':
@@ -798,18 +809,7 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
        $config['views.settings']['ui']['show']['performance_statistics'] = TRUE;
        $config['system.logging']['error_level'] = 'all';
        # $settings['cache']['bins']['render'] = 'cache.backend.null';
-       # $settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.null';
-       $databases['default']['default'] = array (
-        'database' => '#{database}#',
-        'username' => '#{username}#',
-        'password' => '#{password}#',
-        'prefix' => '',
-        'host' => '#{hostname}#',
-        'port' => '#{port}#',
-        'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-        'driver' => 'mysql',
-      );
-      
+       # $settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.null';    
        break;
    }
 }
