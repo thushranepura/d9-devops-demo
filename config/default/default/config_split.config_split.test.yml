@@ -6,8 +6,7 @@ id: test
 label: 'Test '
 description: 'Test Environment configs'
 folder: ../config/default/test
-module:
-  devel: 0
+module: {  }
 theme: {  }
 blacklist: {  }
 graylist: {  }
