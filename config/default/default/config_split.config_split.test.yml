@@ -1,11 +1,11 @@
-uuid: c0e3656a-c491-44f7-bd66-6aa412eb498b
+uuid: 86a98337-dcce-4949-a04c-f27b766a4ae2
 langcode: en
 status: true
 dependencies: {  }
-id: dev
-label: Dev
-description: 'Dev Enviroment configs'
-folder: ../config/dev
+id: test
+label: 'Test '
+description: 'Test Environment configs'
+folder: ../config/default/test
 module:
   devel: 0
 theme: {  }
