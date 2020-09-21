@@ -9,7 +9,8 @@ folder: ../config/dev
 module:
   devel: 0
 theme: {  }
-blacklist: {  }
+blacklist:
+  - system.site
 graylist: {  }
 graylist_dependents: true
 graylist_skip_equal: true
