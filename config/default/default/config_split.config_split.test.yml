@@ -6,12 +6,11 @@ id: test
 label: 'Test '
 description: 'Test Environment configs'
 folder: ../config/default/test
-module:
-  devel: 0
+module: {  }
 theme: {  }
 blacklist:
   - system.site
 graylist: {  }
 graylist_dependents: true
-graylist_skip_equal: true
+graylist_skip_equal: false
 weight: 0
