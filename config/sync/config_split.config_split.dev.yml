@@ -6,7 +6,8 @@ id: dev
 label: Dev
 description: 'Dev Enviroment configs'
 folder: ../config/dev
-module: {  }
+module:
+  devel: 0
 theme: {  }
 blacklist: {  }
 graylist: {  }
