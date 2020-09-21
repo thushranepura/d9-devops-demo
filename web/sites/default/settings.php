@@ -798,7 +798,6 @@ $databases['default']['default'] = array (
        $config['system.logging']['error_level'] = 'none';
        $config['config_split.config_split.dev']['status'] = FALSE;
        $config['config_split.config_split.test']['status'] = TRUE;
-       $config['config_split.config_split.deafult']['status'] = TRUE;
        break;
    case 'dev':
      default :
@@ -813,7 +812,6 @@ $databases['default']['default'] = array (
        $config['system.logging']['error_level'] = 'all';
        $config['config_split.config_split.dev']['status'] = TRUE;
        $config['config_split.config_split.test']['status'] = FALSE;
-       $config['config_split.config_split.deafult']['status'] = TRUE;
        # $settings['cache']['bins']['render'] = 'cache.backend.null';
        # $settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.null';    
        break;
