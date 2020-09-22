@@ -10,9 +10,9 @@ module:
   devel: 0
   devel_generate: 0
 theme: {  }
-blacklist:
+blacklist: {  }
+graylist:
   - system.site
-graylist: {  }
 graylist_dependents: true
 graylist_skip_equal: false
 weight: 0

@@ -9,7 +9,8 @@ folder: ../config/splits/test
 module: {  }
 theme: {  }
 blacklist: {  }
-graylist: {  }
+graylist:
+  - system.site
 graylist_dependents: true
 graylist_skip_equal: false
 weight: 0
