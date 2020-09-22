@@ -1,0 +1,18 @@
+uuid: c0e3656a-c491-44f7-bd66-6aa412eb498b
+langcode: en
+status: true
+dependencies: {  }
+id: dev
+label: Dev
+description: 'Dev Enviroment configs'
+folder: ../config/splits/dev
+module:
+  devel: 0
+  devel_generate: 0
+theme: {  }
+blacklist:
+  - system.site
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: false
+weight: 0
